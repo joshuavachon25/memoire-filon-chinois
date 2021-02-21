@@ -1,0 +1,78 @@
+[八,bā, 8], 
+[四, sì, 4], 
+[好, hǎo, bien/bon], 
+[子, zǐ, enfant (suffixe)], 
+[都, dōu, tous], 
+[多, duō, combien/beaucoup], 
+[五, wǔ, 5], [大, dà, grand], 
+[的, de, marqueur de possession], 
+[加, jiā, Canada (abbréviation)], 
+[叫, jiào, s'appeler (prénom ou nom complet)],
+[哪, nǎ, quel(le)],
+[吗, ma, particule de questionnement],
+[九, jiǔ, 9],
+[王, Wáng, nom de famille],
+[男, nán, homme],
+[六, liù, 6],
+[女, nǚ, femme],
+[七, qī, 7],
+[很, hěn, très],
+[人, rén, individu],
+[你, nǐ, tu],
+[是, shì, être],
+[十, shí, 10],
+[谢, xiè, merci],
+[姓, xìng, s'appeler (nom de famille)],
+[国, guó, pays],
+[什么, shénme, quoi],
+[他, tā, il],
+[她, tā, elle],
+[们, men, marqueur de pluriel pour individu],
+[门, mén, porte],
+[水, shuǐ, eau],
+[张, zhāng, nom de famille],
+[我, wǒ, je],
+[也, yě, aussi]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
