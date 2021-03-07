@@ -358,12 +358,14 @@ const lecon9 = [
 
 ]
 
-
-const jeux = [jeu1]
+const listeJeux = [lecon1, lecon2, lecon3, lecon4, lecon5, lecon6, lecon7, lecon8, lecon9, similaire1]
+let jeux = []
+let nbcartes = 0
 
 let active = []
 let score
 let pop = document.querySelector(".pop")
+let template
 
 function btnCheck(elem){
     elem.parentElement.children[0].children[0].classList.toggle("on")
@@ -373,42 +375,55 @@ function btnCheck(elem){
 
 function init(){
     let toptions = document.querySelector(".options")
-    let selection = []
     pop.children[1].style.display = "none";
-    for (const s of toptions.children) {
-        selection.push(s.children[1].checked)
+    let q = 0
+    while(q<toptions.children.length){
+        if (toptions.children[q].children[1].checked){
+            nbcartes += listeJeux[q].length
+            jeux.push(listeJeux[q])
+        }
+        q++
     }
-    if(selection.includes(true) == false){
+ 
+    if(nbcartes == 0){
         location.reload()
     }else{
-        pop.style.display="none";
-        console.log(selection)
+        pop.style.display="none"
         score = 0
-        let cartes = document.querySelectorAll(".carte");
-        let jeu = shuffle(jeu1)
-        jeu = jeu.slice(0, 8)
-        let paquet = [];
+        let cartes = document.querySelectorAll(".carte")
+        jeux = jeux.flat()
+        let jeu = shuffle(jeux)
+        jeu = jeu.slice(0, 14)
+        let paquet = []
         let z = 0
 
         for (pair of jeu) {
             paquet.push([z, pair[0], "zh"])
-            paquet.push([z, pair[2], "fr"])
+            paquet.push([z, pair[2], "fr", pair[1]])
             z++
         }
 
         paquet = shuffle(paquet)
 
-        for (let i = 0; i < cartes.length; i++) {
-            cartes[i].classList.add(paquet[i][2])
+        for (let i = 0; i < 28; i++) {
+            let nouvelleCarte = document.createElement("div")
+            nouvelleCarte.classList.add(paquet[i][2])
+            nouvelleCarte.classList.add("carte")
             let match = document.createElement("div")
             match.innerText = paquet[i][0]
             match.classList.add("match")
             let contenu = document.createElement("div")
             contenu.classList.add("contenu")
-            contenu.innerText = paquet[i][1]
-            cartes[i].appendChild(match)
-            cartes[i].appendChild(contenu)
-            cartes[i].addEventListener("click", () => {tourner(cartes[i])})
+            if (paquet[i][2] == "zh") {
+                contenu.innerHTML = "<span class='caractere'>" + paquet[i][1] + "</span>"
+            }else{
+                contenu.innerHTML = "<h2>" + paquet[i][1] + "</h2>" + paquet[i][3] 
+            }
+            
+            nouvelleCarte.appendChild(match)
+            nouvelleCarte.appendChild(contenu)
+            nouvelleCarte.addEventListener("click", () => {tourner(nouvelleCarte)})
+            document.getElementById("jeu").appendChild(nouvelleCarte)
         }
     }
 }
@@ -438,7 +453,7 @@ function verif(){
                 active[0].classList.add("trouve")
                 active[1].classList.add("trouve")
                 score += 1
-                if (score == 8) {
+                if (score == 14) {
                     active[0].children[1].classList.remove("rectoTxt")
                     active[1].children[1].classList.remove("rectoTxt")
                     pop.style.display = "block"

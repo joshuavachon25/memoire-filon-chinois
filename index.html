@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu de mémoire Filon Chinois</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -14,33 +13,38 @@
         <div class="overlay"></div>
         <div class="pop" >
             <div class="nouvellePartie">
+                <p>Pour gagner, vous devez trouver les correspondances entre les caractères chinois (cartes rouges) et les traductions françaises (cartes bleues). Vous pouvez combiner les leçons pour augmenter la difficulté du jeu. Bonne chance!</p>
                 <div class="options">
                     <div class="option">
-                        <label for="jeu1"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="jeu1" id="jeu1">Lecon 1
+                        <label for="lecon1"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon1" id="lecon1">Lecon 1
                     </div>
-                    <div class="option disable">
-                        <label for="jeu2"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu2" id="jeu2">Lecon 2
+                    <div class="option">
+                        <label for="lecon2"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="jeu2" id="lecon2">Lecon 2
                     </div>
-                    <div class="option disable">
-                        <label for="jeu3"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu3" id="jeu3">Lecon 3
+                    <div class="option">
+                        <label for="lecon3"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon3" id="lecon3">Lecon 3
                     </div>
-                    <div class="option disable">
-                        <label for="jeu4"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu4" id="jeu4">Lecon 4
+                    <div class="option">
+                        <label for="lecon4"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon4" id="lecon4">Lecon 4
                     </div>
-                    <div class="option disable">
-                        <label for="jeu5"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu5" id="jeu5">Lecon 5
+                    <div class="option">
+                        <label for="lecon5"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon5" id="lecon5">Lecon 5
                     </div>
-                    <div class="option disable">
-                        <label for="jeu6"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu6" id="jeu6">Lecon 6
+                    <div class="option">
+                        <label for="lecon6"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon6" id="lecon6">Lecon 6
                     </div>
-                    <div class="option disable">
-                        <label for="jeu7"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu7" id="jeu7">Lecon 7
+                    <div class="option">
+                        <label for="lecon7"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon7" id="lecon7">Lecon 7
                     </div>
-                    <div class="option disable">
-                        <label for="jeu8"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu8" id="jeu8">Lecon 8
+                    <div class="option">
+                        <label for="lecon8"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon8" id="lecon8">Lecon 8
                     </div>
+                    <div class="option">
+                        <label for="lecon9"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon9" id="lecon9">Lecon 9
+                    </div>
+
                     <div class="option disable">
-                        <label for="jeu9"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="jeu9" id="jeu9">Lecon 9
+                        <label for="similaire1"><div class="togg"><div class="pin"></div></div></label><input onchange="" type="checkbox" name="similaire1" id="similaire1">Similaire
                     </div>
                 </div>
                 <button id="new" class="btn" onclick="init()">Débuter!</button>
@@ -62,23 +66,7 @@
                 <button class="btn recommencer" onclick="location.reload()">Nouvelle partie</button>
             </div>
         </div>
-        <div class="jeu">
-            <div class="carte carte1"></div>
-            <div class="carte carte2"></div>
-            <div class="carte carte3"></div>
-            <div class="carte carte4"></div>
-            <div class="carte carte5"></div>
-            <div class="carte carte6"></div>
-            <div class="carte carte7"></div>
-            <div class="carte carte8"></div>
-            <div class="carte carte9"></div>
-            <div class="carte carte10"></div>
-            <div class="carte carte11"></div>
-            <div class="carte carte12"></div>
-            <div class="carte carte13"></div>
-            <div class="carte carte14"></div>
-            <div class="carte carte15"></div>
-            <div class="carte carte16"></div>
+        <div id="jeu" class="jeu">
         </div>
     </div>
     <script src="app.js"></script>
