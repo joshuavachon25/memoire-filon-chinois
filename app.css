@@ -72,7 +72,7 @@ body{
     user-select: none; 
   }
 
-.jeu{
+/*.jeu{
     width: 75%;
     height: 75%;
     position:absolute;
@@ -83,16 +83,37 @@ body{
     grid-template-rows: repeat(4, 1fr);
     text-align: center;
     grid-gap: 5px;
+}*/
+
+.jeu{
+    width: 90%;
+    height:75%;
+    position:absolute;
+    bottom: 5%;
+    left: 5%;
+    display:flex;
+    /*align-items: stretch;*/
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-basis: 0 0 calc(100%/7 - 1%);
+    gap: 1%;
 }
 
 .carte{
-    aspect-ratio: 1 / 1;
     background: #fff;
     border-radius: 3px;
     display:flex;
     align-items: center;
     justify-content: center;
+    width: calc(100%/7 - 1%);
+    min-width: calc(100%/7 - 1%);
+    max-width: calc(100%/7 - 1%);
+    height: 25%;
+    min-height: 25%;
+    max-height: 25%;
+    text-align:center;
 }
+
 
 .fr{
     background-image: url("img/fr.png"), url("img/cloudfr1.png");
@@ -160,12 +181,11 @@ body{
 
 .nouvellePartie, .termine{
     position: absolute;
-    top: 50%;
-    left:50%;
-    padding: 75px 100px;
-    width: 50%;
+    top: 0;
+    left:0;
+    padding: 40px;
+    width: 100%;
     background: #fff;
-    transform: translate(-50%, -50%);
     text-align:center;
     border-radius: 10px;
     box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.5);
@@ -246,4 +266,53 @@ input[type=checkbox]{
     text-align: justify;
     margin-bottom: 30px;
     margin-top: 30px;
+}
+
+@media only screen and (min-width: 300px){
+    .carte h2, .caractere{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .carte h2, .caractere{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .carte h2, .caractere{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .carte h2, .caractere{
+        font-size: 25px;
+    }
+    .nouvellePartie, .termine{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        padding: 75px 100px;
+        width: 50%;
+        background: #fff;
+        transform: translate(-50%, -50%);
+        text-align:center;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.5);
+    
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .carte h2, .caractere{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .carte h2, .caractere{
+        font-size: 35px;
+    }
 }
