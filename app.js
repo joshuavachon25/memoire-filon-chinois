@@ -404,7 +404,7 @@ function init(){
 
         paquet = shuffle(paquet)
 
-        for (let i = 0; i < 28; i++) {
+        for (let i = 0; i < 36; i++) {
             let nouvelleCarte = document.createElement("div")
             nouvelleCarte.classList.add(paquet[i][2])
             nouvelleCarte.classList.add("carte")
