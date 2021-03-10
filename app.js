@@ -365,7 +365,7 @@ let active = []
 let score
 let pop = document.querySelector(".pop")
 let template
-let statCarte = []
+let statCarte = [30,60]
 
 function btnCheck(elem){
     elem.parentElement.children[0].children[0].classList.toggle("on")
@@ -385,20 +385,17 @@ function init(){
         q++
     }
  
-    if (jeux.length() >= 36) {
-        statCarte = [18, 36]
-    }else{
-        statCarte = [jeux.length(), jeux.length()*2]
-    }
-
+ 
     if(nbcartes == 0){
         location.reload()
     }else{
         pop.style.display="none"
         score = 0
-        let cartes = document.querySelectorAll(".carte")
         jeux = jeux.flat()
         let jeu = shuffle(jeux)
+        if (jeu.length < 60) {
+            statCarte = [jeu.length/2, jeu.length]
+        }
         jeu = jeu.slice(0, statCarte[0])
         let paquet = []
         let z = 0
@@ -414,7 +411,7 @@ function init(){
         for (let i = 0; i < statCarte[1]; i++) {
             let nouvelleCarte = document.createElement("div")
             nouvelleCarte.classList.add(paquet[i][2])
-            nouvelleCarte.classList.add("carte")
+            nouvelleCarte.classList.add("carte1")
             let match = document.createElement("div")
             match.innerText = paquet[i][0]
             match.classList.add("match")
@@ -423,7 +420,7 @@ function init(){
             if (paquet[i][2] == "zh") {
                 contenu.innerHTML = "<span class='caractere'>" + paquet[i][1] + "</span>"
             }else{
-                contenu.innerHTML = "<h2>" + paquet[i][1] + "</h2>" + paquet[i][3] 
+                contenu.innerHTML = "<h4>" + paquet[i][1] + "</h4><small>" + paquet[i][3] + "</small>"
             }
             
             nouvelleCarte.appendChild(match)
