@@ -365,6 +365,7 @@ let active = []
 let score
 let pop = document.querySelector(".pop")
 let template
+let statCarte = []
 
 function btnCheck(elem){
     elem.parentElement.children[0].children[0].classList.toggle("on")
@@ -384,6 +385,12 @@ function init(){
         q++
     }
  
+    if (jeux.length() >= 36) {
+        statCarte = [18, 36]
+    }else{
+        statCarte = [jeux.length(), jeux.length()*2]
+    }
+
     if(nbcartes == 0){
         location.reload()
     }else{
@@ -392,7 +399,7 @@ function init(){
         let cartes = document.querySelectorAll(".carte")
         jeux = jeux.flat()
         let jeu = shuffle(jeux)
-        jeu = jeu.slice(0, 18)
+        jeu = jeu.slice(0, statCarte[0])
         let paquet = []
         let z = 0
 
@@ -404,7 +411,7 @@ function init(){
 
         paquet = shuffle(paquet)
 
-        for (let i = 0; i < 36; i++) {
+        for (let i = 0; i < statCarte[1]; i++) {
             let nouvelleCarte = document.createElement("div")
             nouvelleCarte.classList.add(paquet[i][2])
             nouvelleCarte.classList.add("carte")
@@ -452,7 +459,7 @@ function verif(){
                 active[0].classList.add("trouve")
                 active[1].classList.add("trouve")
                 score += 1
-                if (score == 14) {
+                if (score == statCarte[0]) {
                     active[0].children[1].classList.remove("rectoTxt")
                     active[1].children[1].classList.remove("rectoTxt")
                     pop.style.display = "block"
