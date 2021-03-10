@@ -392,7 +392,7 @@ function init(){
         let cartes = document.querySelectorAll(".carte")
         jeux = jeux.flat()
         let jeu = shuffle(jeux)
-        jeu = jeu.slice(0, 14)
+        jeu = jeu.slice(0, 18)
         let paquet = []
         let z = 0
 
