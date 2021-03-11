@@ -1,4 +1,4 @@
-# Jeu de mémoire du Filon-Chinois v0.4.2:
+# Jeu de mémoire du Filon-Chinois v0.3.1:
 
 Petit jeu de mémoire pour apprendre le mandarin sur le site Filon-chinois.ca. Le jeu est programmé en HTML, CSS et Vanilla JS. 
 
