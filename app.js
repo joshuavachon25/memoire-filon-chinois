@@ -286,7 +286,7 @@ const lecon8 = [
     ["月", "yuè", "mois, lune"],
     ["上(个)星期", "shang(ge) xīngqī", "semaine passée"],
     ["下(个)月", "xià(ge) yuè", "mois prochain"],
-    ["上(个)月", "shang(ge) yuè", "mois passé"],
+    ["上(个)月", "shàng(ge) yuè", "mois passé"],
     ["天", "tiān", "jour (quantité)"],
     ["昨天", "zuótiān", "hier"],
     ["今天", "jīntiān", "aujourd'hui"],
