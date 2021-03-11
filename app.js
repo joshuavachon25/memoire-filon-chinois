@@ -365,7 +365,7 @@ let active = []
 let score
 let pop = document.querySelector(".pop")
 let template
-let statCarte = [30,60]
+let statCarte = [25,50]
 
 function btnCheck(elem){
     elem.parentElement.children[0].children[0].classList.toggle("on")
@@ -393,7 +393,7 @@ function init(){
         score = 0
         jeux = jeux.flat()
         let jeu = shuffle(jeux)
-        if (jeu.length < 60) {
+        if (jeu.length < 50) {
             statCarte = [jeu.length/2, jeu.length]
         }
         jeu = jeu.slice(0, statCarte[0])

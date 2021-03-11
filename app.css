@@ -21,18 +21,18 @@ body{
 
 .header{
     width: 80%;
-    height: 15%;
+    height: 10%;
     position: absolute;
     display:flex;
     align-items: center;
     justify-content:space-around;
-    top: 5%;
+    top: 2%;
     left: 10%;
     text-align: center;
 }
 
 .logo, .coups{
-    font-size: 60px;
+    font-size: 30px;
     line-height: 100%;
     color:#DA6346;
 }
@@ -41,7 +41,7 @@ body{
     filter:invert();
 }
 .coups_label{
-    font-size: 24px;
+    font-size: 17px;
     line-height: 100%;
     color:#DA6346;
 }
@@ -86,17 +86,15 @@ body{
 }*/
 
 .jeu{
-    width: 90%;
-    height:75%;
+    width: 94%;
+    height:83%;
     position:absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 3%;
+    left: 3%;
     display:flex;
-    /*align-items: stretch;*/
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     flex-basis: 0 0 calc(100%/5 - 1%);
-    gap: 0.5%;
 }
 
 /*.carte{
@@ -121,12 +119,12 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
-    height: calc(100%/12 - 1%);
-    min-height: calc(100%/12 - 1%);
-    max-height: calc(100%/12 - 1%);
-    width: 19%;
-    min-width: 19% ;
-    max-width: 19%;
+    height: calc(100%/10 - 1%);
+    min-height: calc(100%/10 - 1%);
+    max-height: calc(100%/10 - 1%);
+    width: 19.5%;
+    min-width: 19.5% ;
+    max-width: 19.5%;
     text-align:center;
 }
 
@@ -276,16 +274,32 @@ input[type=checkbox]{
 .caractere{
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 24px;
+    background: white;
 }
 
 small{
     font-size: 10px;
+    line-height: 10px;
+    background: white;
+    padding:0;
+    margin:0;
 }
 
 .nouvellePartie p{
     text-align: justify;
     margin-bottom: 30px;
     margin-top: 30px;
+}
+
+h4{
+    line-height: 14px;
+    background: white;
+    padding:0;
+    margin:0;
+}
+
+#alerte{
+    display:none;
 }
 
 @media only screen and (min-width: 1000px){
@@ -300,6 +314,16 @@ small{
         text-align:center;
         border-radius: 10px;
         box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.5);
-    
+    }
+}
+
+
+@media only screen and (max-width: 700px){
+    #alerte{
+        display:block;
+        padding-bottom: 30px;
+        color: crimson;
+        font-weight: bold;
+
     }
 }

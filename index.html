@@ -14,6 +14,7 @@
         <div class="pop" >
             <div class="nouvellePartie">
                 <p>Pour gagner, vous devez trouver les correspondances entre les caractères chinois (cartes rouges) et les traductions françaises (cartes bleues). Vous pouvez combiner les leçons pour augmenter la difficulté du jeu. Plus de <b>300 caractères</b> sont disponibles pour l'instant! Bonne chance!</p>
+                <span id="alerte">Pour une expérience optimale, veuillez jouer sur un écran de plus grande dimension!</span>
                 <div class="options">
                     <div class="option">
                         <label for="lecon1"><div class="togg"><div class="pin"></div></div></label><input onchange="btnCheck(this)" type="checkbox" name="lecon1" id="lecon1">Lecon 1
@@ -48,7 +49,7 @@
                     </div>
                 </div>
                 <button id="new" class="btn" onclick="init()">Débuter!</button>
-                <p><b>V.0.4.1:</b>Limite des cartes augmentée à 60</p>
+                <p><b>V.0.4.2:</b>Ajustement des cases</p>
                 
             </div>
             <div class="termine hide">
@@ -67,6 +68,7 @@
                 <button class="btn recommencer" onclick="location.reload()">Nouvelle partie</button>
             </div>
         </div>
+        
         <div id="jeu" class="jeu">
         </div>
     </div>
